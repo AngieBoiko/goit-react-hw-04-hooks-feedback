@@ -11,13 +11,13 @@ export default function App() {
 
   const feedbackCounter = event => {
     if (event.target.textContent.toLowerCase() === 'good') {
-      setGoodFeedback({ goodFeedback: goodFeedback + 1 });
+      setGoodFeedback(state => state + 1);
     }
     if (event.target.textContent.toLowerCase() === 'neutral') {
-      setNeutralFeedback({ neutralFeedback: neutralFeedback + 1 });
+      setNeutralFeedback(state => state + 1);
     }
     if (event.target.textContent.toLowerCase() === 'bad') {
-      setBadFeedback({ badFeedback: badFeedback + 1 });
+      setBadFeedback(state => state + 1);
     }
   };
 
